@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "PORT=3333 next dev",
+    "dev": "set PORT=3333 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
