@@ -1,4 +1,5 @@
-import styles from "./page.module.css";
-export default function Home() {
-  return <main className={styles.main}>tweet page</main>;
+import Home from "@/app/(afterLogin)/home/page";
+
+export default function Page() {
+  return <Home />;
 }
