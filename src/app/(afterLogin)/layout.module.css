@@ -69,6 +69,12 @@
   background-color: rgb(26, 140, 216);
 }
 
+.postButton svg {
+  display: inline-block;
+  fill: white;
+  width: 24px;
+}
+
 .rightSectionWrapper {
   display: flex;
   align-items: flex-start;
