@@ -1,12 +1,13 @@
 import styles from "@/app/(beforeLogin)/_component/main.module.css";
 import Image from "next/image";
+import zLogo from "../../../../public/zlogo.png";
 import Link from "next/link";
-import nextLogo from "../../../../public/next.svg";
+
 export default function Main() {
   return (
     <>
       <div className={styles.left}>
-        <Image src={nextLogo} alt="logo" width={40} height={40} />
+        <Image src={zLogo} alt="logo" />
       </div>
       <div className={styles.right}>
         <h1>지금 일어나고 있는 일</h1>

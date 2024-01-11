@@ -19,10 +19,10 @@ export default function Post({ noImage }: Props) {
     postId: 1,
     User: {
       id: "elonmusk",
-      nickname: faker.person.fullName(),
-      image: faker.image.urlLoremFlickr(),
+      nickname: "Elon Musk",
+      image: "/yRsRRjGO.jpg",
     },
-    content: faker.lorem.sentence(),
+    content: "클론코딩 라이브로 하니 너무 힘들어요 ㅠㅠ",
     createdAt: new Date(),
     Images: [] as any[],
   };

@@ -32,7 +32,6 @@
   .leftSectionFixed {
     align-items: flex-start;
   }
-
 }
 
 .leftSectionFixed nav {
@@ -57,7 +56,7 @@
   align-items: center;
 }
 .logoPill:hover {
-  background-color: rgba(15,20,25, 0.1);
+  background-color: rgba(15, 20, 25, 0.1);
 }
 
 .postButton {

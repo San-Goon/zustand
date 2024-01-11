@@ -2,7 +2,6 @@
 
 import style from "./modal.module.css";
 import { useRef, useState } from "react";
-
 export default function TweetModal() {
   const [content, setContent] = useState();
   const imageRef = useRef<HTMLInputElement>(null);
@@ -11,12 +10,15 @@ export default function TweetModal() {
   const onClickButton = () => {};
   const onChangeContent = () => {};
 
-  const me = {};
+  const me = {
+    id: "zerohch0",
+    image: "/5Udwvqim.jpg",
+  };
 
   return (
     <div className={style.modalBackground}>
       <div className={style.modal}>
-        <button className={style.closeButton}>
+        <button className={style.closeButton} onClick={onClickClose}>
           <svg
             width={24}
             viewBox="0 0 24 24"
@@ -28,15 +30,17 @@ export default function TweetModal() {
             </g>
           </svg>
         </button>
-        <form className={style.modalForm}>
+        <form className={style.modalForm} onSubmit={onSubmit}>
           <div className={style.modalBody}>
             <div className={style.postUserSection}>
-              <div className={style.postUserImage}>hello</div>
+              <div className={style.postUserImage}>
+                <img src={me.image} alt={me.id} />
+              </div>
             </div>
             <div className={style.inputDiv}>
               <textarea
                 className={style.input}
-                placeholder="placeholder"
+                placeholder="무슨 일이 일어나고 있나요?"
                 value={content}
                 onChange={onChangeContent}
               />
