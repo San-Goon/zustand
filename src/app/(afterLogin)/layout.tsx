@@ -2,20 +2,15 @@ import { ReactNode } from "react";
 import style from "@/app/(afterLogin)/layout.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import nextLogo from "../../../public/next.svg";
+import ZLogo from "../../../public/zlogo.png";
 import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
 import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
-import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
 import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
+import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
 import RightSearchZone from "@/app/(afterLogin)/_component/RightSearchZone";
 
-export default function AfterLoginLayout({
-  children,
-  modal,
-}: {
-  children: ReactNode;
-  modal: ReactNode;
-}) {
+type Props = { children: ReactNode; modal: ReactNode };
+export default function AfterLoginLayout({ children, modal }: Props) {
   return (
     <div className={style.container}>
       <header className={style.leftSectionWrapper}>
@@ -23,7 +18,7 @@ export default function AfterLoginLayout({
           <div className={style.leftSectionFixed}>
             <Link className={style.logo} href="/home">
               <div className={style.logoPill}>
-                <Image src={nextLogo} alt="logo" width={40} height={40} />
+                <Image src={ZLogo} alt="z.com로고" width={40} height={40} />
               </div>
             </Link>
             <nav>
@@ -55,6 +50,8 @@ export default function AfterLoginLayout({
             <TrendSection />
             <div className={style.followRecommend}>
               <h3>팔로우 추천</h3>
+              <FollowRecommend />
+              <FollowRecommend />
               <FollowRecommend />
             </div>
           </section>
